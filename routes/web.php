@@ -21,7 +21,9 @@ Route::get('/pizza_show/{id}', 'GuestCtrl@show')->name('pizza-show');
 Route::get('/pizza/edit/{id}', 'RestrictedL1Ctrl@edit')->name('pizza-edit');
 Route::post('/pizza/update/{id}', 'RestrictedL1Ctrl@update')->name('pizza-update');
 Route::get('/pizza/del/{id}', 'RestrictedL1Ctrl@del')->name('pizza-del');
+
 Route::get('/pizza/new', 'RestrictedL1Ctrl@newPizza')->name('pizza-new');
+Route::post('/pizza/new', 'RestrictedL1Ctrl@store')->name('pizza-store');
 
 
 // per l'API

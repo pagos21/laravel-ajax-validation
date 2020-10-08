@@ -41,6 +41,11 @@ class RestrictedL1Ctrl extends Controller
 
     public function store(Request $request){
         $data = $request-> all();
+        $data = $request -> validate([
+            'nome' => 'required|min:2|max:20',
+            'prezzo' => 'required|gte:0',
+            'disponibile' => 'required'
+        ]);
         $pizza = Pizza::create($data);
 
         return redirect() -> route('index');
