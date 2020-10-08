@@ -12,7 +12,7 @@
                     @method('POST')
                     <div class="form-group">
                         <label for="nome">Nome Pizza</label>
-                        <input type="text" name="nome" class="form-control @error('name') is-invalid @enderror aria-describedby="emailHelp" value="{{old('nome')}} ">
+                        <input type="text" name="nome" class="form-control @error('nome') is-invalid @enderror" aria-describedby="emailHelp" value="{{old('nome')}} ">
                         @error('nome')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{$message}} </strong>
